@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Locomotive Scroll overrides */
+  html.has-scroll-smooth {
+    overflow: hidden;
+  }
+
+  html.has-scroll-smooth body {
+    overflow: hidden;
+  }
+
+  [data-scroll-container] {
+    min-height: 100vh;
+  }
+
+  body {
+    @apply font-body text-charcoal bg-surface;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold tracking-tight text-charcoal;
+  }
+
+  ::selection {
+    @apply bg-accent-100 text-charcoal;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-5 sm:px-8 lg:px-12 xl:px-16;
+  }
+
+  .section-vertical {
+    @apply py-20 sm:py-24 lg:py-30;
+  }
+
+  .container-max {
+    @apply mx-auto max-w-7xl;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Glassmorphic utilities */
+  .glass {
+    @apply bg-white/60 backdrop-blur-md border border-white/40;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+
+  .glass-dark {
+    @apply bg-charcoal/40 backdrop-blur-md border border-white/10;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-accent {
+    @apply bg-accent/10 backdrop-blur-md border border-accent/20;
+    box-shadow: 0 8px 32px rgba(194, 102, 45, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .glass-hover {
+    @apply transition-all duration-300;
+  }
+
+  .glass-hover:hover {
+    @apply shadow-elevated -translate-y-1;
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+@layer utilities {
+  .gradient-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(28, 28, 30, 0.7) 0%,
+      rgba(28, 28, 30, 0.4) 50%,
+      rgba(28, 28, 30, 0.8) 100%
+    );
+  }
+
+  .glass-shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-shine::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.08),
+      transparent
+    );
+    transition: left 0.6s ease;
+    pointer-events: none;
+  }
+
+  .glass-shine:hover::before {
+    left: 100%;
+  }
+}
