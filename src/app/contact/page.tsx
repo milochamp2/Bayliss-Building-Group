@@ -246,9 +246,9 @@ export default function ContactPage() {
                   },
                   {
                     icon: MapPin,
-                    title: "Office",
-                    detail: `${siteConfig.address.street}`,
-                    subtitle: `${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.postcode}`,
+                    title: "Location",
+                    detail: `${siteConfig.address.city}, ${siteConfig.address.state}`,
+                    subtitle: siteConfig.address.country,
                   },
                   {
                     icon: Clock,

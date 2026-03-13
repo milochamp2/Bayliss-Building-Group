@@ -33,9 +33,13 @@ export function Footer() {
                 </span>
               </div>
             </Link>
-            <p className="text-body-sm text-white/60 leading-relaxed max-w-xs mb-6">
-              Licensed commercial construction and carpentry across Victoria,
-              Australia. Built with strength, delivered with precision.
+            <p className="text-body-sm text-white/60 leading-relaxed max-w-xs mb-4">
+              Commercial Construction &amp; Carpentry
+              <br />
+              Licensed Builder — {siteConfig.address.state}
+            </p>
+            <p className="text-body-sm text-white/40 leading-relaxed max-w-xs mb-6">
+              {siteConfig.director}, {siteConfig.directorTitle}
             </p>
             <div className="flex gap-3">
               <a
@@ -121,10 +125,9 @@ export function Footer() {
                 <span className="flex items-start gap-3 text-body-sm text-white/70">
                   <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                   <span>
-                    {siteConfig.address.street}
+                    {siteConfig.address.city}, {siteConfig.address.state}
                     <br />
-                    {siteConfig.address.city}, {siteConfig.address.state}{" "}
-                    {siteConfig.address.postcode}
+                    {siteConfig.address.country}
                   </span>
                 </span>
               </li>
@@ -136,7 +139,7 @@ export function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-body-sm text-white/40">
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
-            reserved. ABN {siteConfig.abn}
+            reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link

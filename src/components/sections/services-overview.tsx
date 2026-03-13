@@ -21,8 +21,8 @@ export function ServicesOverview() {
       <Container>
         <SectionHeader
           label="What We Do"
-          title="Construction Services Built on Expertise"
-          description="From large-scale commercial builds to precision carpentry, we bring expertise, discipline, and attention to detail across every trade and project phase."
+          title="Construction Services Built on Experience"
+          description="We deliver a wide range of construction services including commercial builds, structural carpentry, fit-outs, and full project management across Victoria."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">

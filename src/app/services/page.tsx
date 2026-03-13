@@ -60,9 +60,9 @@ export default function ServicesPage() {
               Comprehensive Construction Capabilities
             </h1>
             <p className="mt-6 text-body-lg text-white/60 leading-relaxed max-w-2xl">
-              From ground-up commercial builds to precision carpentry and
-              full-project management — we deliver the complete scope of services
-              needed to bring your project to life.
+              From schools and childcare centres to commercial fit-outs and
+              structural carpentry — we deliver the complete scope of
+              construction services needed to bring your project to life.
             </p>
           </motion.div>
         </Container>

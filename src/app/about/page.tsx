@@ -90,10 +90,9 @@ export default function AboutPage() {
               Building Victoria&apos;s Future
             </h1>
             <p className="mt-6 text-body-lg text-white/60 leading-relaxed max-w-2xl">
-              For over 15 years, Bayliss Building Group has been a trusted name
-              in commercial construction and carpentry across Melbourne and
-              Victoria. We bring experience, discipline, and craft to every
-              project.
+              Experienced builders delivering reliable construction solutions
+              with strong workmanship and safety across commercial and
+              residential sectors in Victoria.
             </p>
           </motion.div>
         </Container>
@@ -131,27 +130,30 @@ export default function AboutPage() {
             <div>
               <SectionHeader
                 label="Our Story"
-                title="Grounded in Experience, Driven by Standards"
+                title="Built on Experience. Driven by Standards."
                 align="left"
                 className="mb-8"
               />
               <div className="space-y-5 text-body-lg text-grey leading-relaxed">
                 <p>
-                  Bayliss Building Group was founded with a straightforward
-                  philosophy: do quality work, communicate honestly, and deliver
-                  on every commitment. That philosophy hasn&apos;t changed.
+                  Bayliss Building Group is a licensed construction and carpentry
+                  company specialising in commercial and residential building
+                  projects across Victoria.
                 </p>
                 <p>
-                  From our roots in structural carpentry, we&apos;ve grown into a
-                  diversified commercial construction company delivering
-                  projects across offices, retail, hospitality, industrial, and
-                  community sectors.
+                  Our team delivers a wide range of construction services
+                  including structural carpentry, commercial fit-outs, building
+                  projects, and subcontract construction services.
                 </p>
                 <p>
-                  Our team includes experienced project managers, qualified
-                  tradespeople, and dedicated safety professionals — all working
-                  together to ensure every project meets the highest standards
-                  of quality, compliance, and client satisfaction.
+                  With a strong focus on safety, quality workmanship and
+                  reliability, Bayliss Building Group partners with developers,
+                  builders and commercial clients to deliver projects that meet
+                  strict industry standards and timelines.
+                </p>
+                <p>
+                  Our commitment to professionalism and attention to detail
+                  ensures every project is completed with precision and pride.
                 </p>
               </div>
             </div>
@@ -161,23 +163,23 @@ export default function AboutPage() {
               {[
                 {
                   icon: Target,
-                  title: "Our Mission",
-                  text: "To deliver construction projects that exceed client expectations through quality workmanship, safety leadership, and transparent partnerships.",
+                  title: "Quality Workmanship",
+                  text: "High-quality construction solutions delivered with precision and attention to detail on every project — commercial and residential.",
                 },
                 {
                   icon: Award,
-                  title: "Our Standard",
-                  text: "Every project is held to the same uncompromising standard — whether it's a $200K fit-out or a multi-million-dollar commercial build.",
+                  title: "Reliability",
+                  text: "A dependable team that delivers on commitments. We focus on efficient project delivery and transparent communication from start to finish.",
                 },
                 {
                   icon: Users,
-                  title: "Our People",
-                  text: "Our team is our greatest asset. We invest in skilled tradespeople and experienced managers who share our commitment to quality.",
+                  title: "Our Clients",
+                  text: "We partner with commercial developers, construction companies, architects, government agencies, schools, childcare centres, and private clients.",
                 },
                 {
                   icon: TrendingUp,
-                  title: "Our Growth",
-                  text: "Sustainable, reputation-driven growth. Every new client relationship is built on referrals, repeat business, and proven results.",
+                  title: "Industry Growth",
+                  text: "Actively pursuing commercial construction opportunities including school developments, childcare centres, government infrastructure, and builder subcontracting.",
                 },
               ].map((item, i) => (
                 <motion.div

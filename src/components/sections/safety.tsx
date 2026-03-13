@@ -1,34 +1,46 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, HardHat, FileCheck, Users } from "lucide-react";
+import { ShieldCheck, HardHat, FileCheck, Users, ClipboardList, Eye } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 
 const safetyItems = [
   {
-    icon: ShieldCheck,
-    title: "Zero Harm Culture",
+    icon: FileCheck,
+    title: "SWMS Documentation",
     description:
-      "Safety is non-negotiable. We maintain a zero-harm approach across every site, every day.",
+      "Safe Work Method Statements prepared and maintained for every task and trade on site.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Site Safety Procedures",
+    description:
+      "Comprehensive safety procedures integrated into every stage of our construction process.",
+  },
+  {
+    icon: ClipboardList,
+    title: "Risk Assessments",
+    description:
+      "Thorough risk assessments conducted before and during works to identify and mitigate hazards.",
   },
   {
     icon: HardHat,
-    title: "Ongoing Training",
+    title: "PPE Compliance",
     description:
-      "Regular safety inductions, toolbox talks, and skills development for all team members and subcontractors.",
-  },
-  {
-    icon: FileCheck,
-    title: "Full Compliance",
-    description:
-      "SWMS, JSAs, and site safety plans prepared and maintained to meet all regulatory requirements.",
+      "Strict PPE requirements enforced across all sites for every worker, subcontractor, and visitor.",
   },
   {
     icon: Users,
-    title: "Site Management",
+    title: "Trade Coordination",
     description:
-      "Dedicated safety officers and experienced site managers ensure standards are upheld at all times.",
+      "Coordinated trade management to ensure safe working conditions when multiple teams are on site.",
+  },
+  {
+    icon: Eye,
+    title: "Site Inductions",
+    description:
+      "Mandatory site inductions for all personnel before commencing work on any Bayliss project.",
   },
 ];
 
@@ -36,7 +48,7 @@ export function Safety() {
   return (
     <Section background="dark">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Content */}
           <div>
             <motion.div
@@ -54,15 +66,15 @@ export function Safety() {
                 <span className="text-accent">It&apos;s a Standard.</span>
               </h2>
               <p className="text-body-lg text-white/60 leading-relaxed max-w-xl">
-                At Bayliss Building Group, safety underpins everything we do. Our
-                rigorous systems, training programs, and site management practices
-                ensure that every person goes home safe — every day.
+                Bayliss Building Group is committed to maintaining a safe work
+                environment across every project. Safety is integrated into every
+                stage of our construction process.
               </p>
             </motion.div>
           </div>
 
           {/* Safety Items */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {safetyItems.map((item, i) => (
               <motion.div
                 key={item.title}

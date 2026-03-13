@@ -35,9 +35,9 @@ export function CTA() {
             Let&apos;s Talk About Your Next Project
           </h2>
           <p className="text-body-lg text-white/60 leading-relaxed mb-10">
-            Whether you&apos;re planning a new commercial build, fit-out, or
-            construction project in Victoria — get in touch to discuss how
-            Bayliss Building Group can deliver.
+            Whether you&apos;re planning a school development, childcare centre,
+            commercial build, office fit-out, or government project — get in
+            touch to discuss how Bayliss Building Group can deliver.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

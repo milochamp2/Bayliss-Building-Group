@@ -38,7 +38,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block font-heading font-semibold text-accent text-body-sm uppercase tracking-widest mb-6">
-              Licensed Commercial Builder — Victoria, Australia
+              Commercial Construction & Carpentry — Victoria, Australia
             </span>
           </motion.div>
 
@@ -59,9 +59,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-7 text-body-lg sm:text-xl text-white/70 max-w-2xl leading-relaxed"
           >
-            From ground-up commercial builds to precision carpentry and structural
-            framing — Bayliss Building Group delivers projects that stand the test
-            of time across Melbourne and Victoria.
+            Bayliss Building Group delivers high-quality construction solutions
+            with a strong focus on workmanship, reliability, safety and efficient
+            project delivery across Melbourne and Victoria.
           </motion.p>
 
           <motion.div
@@ -94,7 +94,7 @@ export function Hero() {
               { label: "Years Experience", value: "15+" },
               { label: "Projects Delivered", value: "200+" },
               { label: "Safety Record", value: "Zero Harm" },
-              { label: "Licensed & Insured", value: "VIC CDB" },
+              { label: "Licensed Builder", value: "VIC" },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col">
                 <span className="font-heading font-bold text-heading-sm text-white">
