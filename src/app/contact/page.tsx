@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Phone,
@@ -15,6 +16,7 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/site";
+import { images } from "@/data/images";
 
 const serviceOptions = [
   "Commercial Construction",
@@ -37,15 +39,20 @@ export default function ContactPage() {
     <>
       {/* Page Hero */}
       <section className="relative pt-30 pb-20 sm:pt-36 sm:pb-24 bg-charcoal overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-        <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-accent" />
+        <div className="absolute inset-0">
+          <Image
+            src={images.contactHero}
+            alt="Construction site"
+            fill
+            className="object-cover object-center"
+            priority
+            quality={85}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/80 to-charcoal/60" />
+          <div className="absolute inset-0 bg-charcoal/30" />
+        </div>
+        <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-accent z-10" />
         <Container className="relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -119,7 +126,7 @@ export default function ContactPage() {
                             type="text"
                             required
                             placeholder="John Smith"
-                            className="w-full h-11 px-4 rounded-lg border border-white/60 bg-white/50 backdrop-blur-sm text-body text-charcoal placeholder:text-charcoal-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent focus:bg-white/80 transition-all"
+                            className="w-full h-11 px-4 rounded-lg border border-charcoal-200/80 bg-white/80 backdrop-blur-sm text-body text-charcoal placeholder:text-charcoal-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent focus:bg-white transition-all"
                           />
                         </div>
                         <div>
@@ -129,7 +136,7 @@ export default function ContactPage() {
                           <input
                             type="text"
                             placeholder="Company name"
-                            className="w-full h-11 px-4 rounded-lg border border-white/60 bg-white/50 backdrop-blur-sm text-body text-charcoal placeholder:text-charcoal-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent focus:bg-white/80 transition-all"
+                            className="w-full h-11 px-4 rounded-lg border border-charcoal-200/80 bg-white/80 backdrop-blur-sm text-body text-charcoal placeholder:text-charcoal-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent focus:bg-white transition-all"
                           />
                         </div>
                       </div>
@@ -143,7 +150,7 @@ export default function ContactPage() {
                             type="email"
                             required
                             placeholder="john@example.com"
-                            className="w-full h-11 px-4 rounded-lg border border-white/60 bg-white/50 backdrop-blur-sm text-body text-charcoal placeholder:text-charcoal-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent focus:bg-white/80 transition-all"
+                            className="w-full h-11 px-4 rounded-lg border border-charcoal-200/80 bg-white/80 backdrop-blur-sm text-body text-charcoal placeholder:text-charcoal-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent focus:bg-white transition-all"
                           />
                         </div>
                         <div>
@@ -154,7 +161,7 @@ export default function ContactPage() {
                             type="tel"
                             required
                             placeholder="04XX XXX XXX"
-                            className="w-full h-11 px-4 rounded-lg border border-white/60 bg-white/50 backdrop-blur-sm text-body text-charcoal placeholder:text-charcoal-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent focus:bg-white/80 transition-all"
+                            className="w-full h-11 px-4 rounded-lg border border-charcoal-200/80 bg-white/80 backdrop-blur-sm text-body text-charcoal placeholder:text-charcoal-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent focus:bg-white transition-all"
                           />
                         </div>
                       </div>
@@ -166,7 +173,7 @@ export default function ContactPage() {
                         <select
                           required
                           defaultValue=""
-                          className="w-full h-11 px-4 rounded-lg border border-charcoal-200 bg-white text-body text-charcoal focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all appearance-none"
+                          className="w-full h-11 px-4 rounded-lg border border-charcoal-200/80 bg-white/80 backdrop-blur-sm text-body text-charcoal focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent focus:bg-white transition-all appearance-none"
                         >
                           <option value="" disabled>
                             Select a service
@@ -186,7 +193,7 @@ export default function ContactPage() {
                         <input
                           type="text"
                           placeholder="Suburb or region in Victoria"
-                          className="w-full h-11 px-4 rounded-lg border border-white/60 bg-white/50 backdrop-blur-sm text-body text-charcoal placeholder:text-charcoal-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent focus:bg-white/80 transition-all"
+                          className="w-full h-11 px-4 rounded-lg border border-charcoal-200/80 bg-white/80 backdrop-blur-sm text-body text-charcoal placeholder:text-charcoal-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent focus:bg-white transition-all"
                         />
                       </div>
 
@@ -198,7 +205,7 @@ export default function ContactPage() {
                           required
                           rows={5}
                           placeholder="Tell us about your project — scope, timeline, budget range, or any specific requirements."
-                          className="w-full px-4 py-3 rounded-lg border border-white/60 bg-white/50 backdrop-blur-sm text-body text-charcoal placeholder:text-charcoal-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent focus:bg-white/80 transition-all resize-none"
+                          className="w-full px-4 py-3 rounded-lg border border-charcoal-200/80 bg-white/80 backdrop-blur-sm text-body text-charcoal placeholder:text-charcoal-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent focus:bg-white transition-all resize-none"
                         />
                       </div>
 

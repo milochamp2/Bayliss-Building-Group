@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Building2,
   Hammer,
@@ -14,7 +15,15 @@ import { Container } from "@/components/ui/container";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { services } from "@/data/site";
+import { images } from "@/data/images";
 import { CTA } from "@/components/sections/cta";
+
+const serviceImages: Record<string, string> = {
+  "commercial-construction": images.services.commercialConstruction,
+  "carpentry-structural-framing": images.services.carpentryFraming,
+  "construction-management": images.services.constructionManagement,
+  "fitouts-refurbishments": images.services.fitouts,
+};
 
 const iconMap = {
   Building2,
@@ -121,16 +130,15 @@ export default function ServicesPage() {
                     transition={{ duration: 0.5 }}
                     className={!isEven ? "lg:order-1 lg:direction-ltr" : ""}
                   >
-                    <div className="aspect-[4/3] rounded-3xl bg-charcoal-200 overflow-hidden relative">
-                      <div className="absolute inset-0 bg-gradient-to-br from-charcoal-300 to-charcoal-100" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-center">
-                          <Icon className="w-12 h-12 text-accent/30 mx-auto mb-3" />
-                          <p className="text-body-sm text-grey font-medium">
-                            {service.title} photo
-                          </p>
-                        </div>
-                      </div>
+                    <div className="aspect-[4/3] rounded-3xl overflow-hidden relative">
+                      <Image
+                        src={serviceImages[service.slug] || images.services.commercialConstruction}
+                        alt={service.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/15 to-transparent" />
                     </div>
                   </motion.div>
                 </div>

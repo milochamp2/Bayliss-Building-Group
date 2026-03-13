@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { projects } from "@/data/site";
+import { images } from "@/data/images";
 import { CTA } from "@/components/sections/cta";
 import { cn } from "@/lib/utils";
 
@@ -83,48 +85,55 @@ export default function ProjectsPage() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
           >
             <AnimatePresence mode="popLayout">
-              {filtered.map((project) => (
-                <motion.div
-                  key={project.slug}
-                  layout
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="group rounded-2xl overflow-hidden bg-white/60 backdrop-blur-md border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.04)] hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 hover:border-white/60 h-full flex flex-col glass-shine">
-                    {/* Image placeholder */}
-                    <div className="aspect-[16/10] bg-charcoal-200 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-charcoal-300 to-charcoal-100" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="flex items-center gap-1">
-                          <div className="w-2 h-8 bg-accent/30 rounded-sm" />
-                          <div className="w-2 h-6 bg-accent/20 rounded-sm" />
-                          <div className="w-2 h-10 bg-accent/30 rounded-sm" />
+              {filtered.map((project) => {
+                const projectIndex = projects.findIndex(
+                  (p) => p.slug === project.slug
+                );
+                return (
+                  <motion.div
+                    key={project.slug}
+                    layout
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className="group rounded-2xl overflow-hidden bg-white/60 backdrop-blur-md border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.04)] hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 hover:border-white/60 h-full flex flex-col glass-shine">
+                      {/* Project Image */}
+                      <div className="aspect-[16/10] relative overflow-hidden">
+                        <Image
+                          src={
+                            images.projects[projectIndex] || images.projects[0]
+                          }
+                          alt={project.title}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/30 to-transparent" />
+                        <div className="absolute top-4 left-4">
+                          <span className="inline-block bg-white/20 backdrop-blur-md border border-white/30 text-white text-[0.7rem] font-heading font-semibold uppercase tracking-wider px-3 py-1.5 rounded-lg">
+                            {project.category}
+                          </span>
                         </div>
                       </div>
-                      <div className="absolute top-4 left-4">
-                        <span className="inline-block bg-white/20 backdrop-blur-md border border-white/30 text-white text-[0.7rem] font-heading font-semibold uppercase tracking-wider px-3 py-1.5 rounded-lg">
-                          {project.category}
-                        </span>
-                      </div>
-                    </div>
 
-                    <div className="p-6 flex flex-col flex-1">
-                      <h3 className="font-heading font-bold text-heading-sm mb-2 group-hover:text-accent transition-colors">
-                        {project.title}
-                      </h3>
-                      <div className="flex items-center gap-1.5 text-body-sm text-grey mb-3">
-                        <MapPin className="w-3.5 h-3.5" />
-                        {project.location} — {project.year}
+                      <div className="p-6 flex flex-col flex-1">
+                        <h3 className="font-heading font-bold text-heading-sm mb-2 group-hover:text-accent transition-colors">
+                          {project.title}
+                        </h3>
+                        <div className="flex items-center gap-1.5 text-body-sm text-grey mb-3">
+                          <MapPin className="w-3.5 h-3.5" />
+                          {project.location} — {project.year}
+                        </div>
+                        <p className="text-body-sm text-grey leading-relaxed flex-1">
+                          {project.description}
+                        </p>
                       </div>
-                      <p className="text-body-sm text-grey leading-relaxed flex-1">
-                        {project.description}
-                      </p>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                );
+              })}
             </AnimatePresence>
           </motion.div>
 

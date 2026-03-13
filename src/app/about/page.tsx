@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Award,
   Users,
@@ -14,6 +15,7 @@ import { Container } from "@/components/ui/container";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { CTA } from "@/components/sections/cta";
+import { images } from "@/data/images";
 
 const timeline = [
   {
@@ -60,15 +62,20 @@ export default function AboutPage() {
     <>
       {/* Page Hero */}
       <section className="relative pt-30 pb-20 sm:pt-36 sm:pb-24 bg-charcoal overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-        <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-accent" />
+        <div className="absolute inset-0">
+          <Image
+            src={images.aboutHero}
+            alt="Construction team at work"
+            fill
+            className="object-cover object-center"
+            priority
+            quality={85}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/80 to-charcoal/60" />
+          <div className="absolute inset-0 bg-charcoal/30" />
+        </div>
+        <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-accent z-10" />
         <Container className="relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
