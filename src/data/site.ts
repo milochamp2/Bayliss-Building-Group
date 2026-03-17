@@ -30,7 +30,55 @@ export const navLinks = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
+  { label: "Partners", href: "/partners" },
   { label: "Contact", href: "/contact" },
+];
+
+export interface PartnerImage {
+  src: string;
+  alt: string;
+}
+
+export interface Partner {
+  name: string;
+  slug: string;
+  website: string;
+  description: string;
+  services: string[];
+  logo?: string;
+  images: PartnerImage[];
+}
+
+export const partners: Partner[] = [
+  {
+    name: "Stretch Electrics",
+    slug: "stretch-electrics",
+    website: "https://www.stretchelectrics.com.au/",
+    description:
+      "Stretch Electrics is a trusted electrical contractor providing electrical, air conditioning, data, and communications services across Melbourne and regional Victoria. With a proven track record working alongside Bayliss Building Group on commercial, education, and residential projects, they deliver reliable and compliant electrical solutions every time.",
+    services: [
+      "Electrical installations",
+      "Air conditioning",
+      "Data & communications",
+      "Commercial fit-outs",
+      "Residential electrical",
+      "Excavation & trenching",
+    ],
+    images: [
+      { src: "/images/partners/stretch-electrics/01-excavation-work.jpg", alt: "Excavation and groundwork on a commercial construction site" },
+      { src: "/images/partners/stretch-electrics/02-commercial-build.jpg", alt: "Large commercial building under construction" },
+      { src: "/images/partners/stretch-electrics/03-living-room-fitout.jpg", alt: "Living room fit-out with integrated TV and electric fireplace" },
+      { src: "/images/partners/stretch-electrics/04-trench-services.jpg", alt: "Electrical conduit and services trenching alongside a building" },
+      { src: "/images/partners/stretch-electrics/05-truck-warehouse.jpg", alt: "Stretch Electrics truck with mini excavator at commercial warehouse" },
+      { src: "/images/partners/stretch-electrics/06-school-project.jpg", alt: "Stretch Electrics truck at Chirnside Park Primary School project" },
+      { src: "/images/partners/stretch-electrics/07-bathroom-fitout.jpg", alt: "Premium bathroom fit-out with freestanding bath and pendant lighting" },
+      { src: "/images/partners/stretch-electrics/08-commercial-retail.jpg", alt: "Stretch Electrics vehicle at commercial retail site" },
+      { src: "/images/partners/stretch-electrics/09-outdoor-pergola.jpg", alt: "Rustic outdoor pergola with string lighting installation" },
+      { src: "/images/partners/stretch-electrics/10-outdoor-pizza-oven.jpg", alt: "Outdoor entertaining area with pizza oven and timber structure" },
+      { src: "/images/partners/stretch-electrics/11-gym-fitout.jpg", alt: "Commercial gym fit-out with TV installation and LED strip lighting" },
+      { src: "/images/partners/stretch-electrics/12-covered-deck.jpg", alt: "Covered deck with downlights and outdoor entertainment setup" },
+    ],
+  },
 ];
 
 export const services = [
