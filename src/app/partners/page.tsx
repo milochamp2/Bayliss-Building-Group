@@ -7,7 +7,6 @@ import Autoplay from "embla-carousel-autoplay";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ExternalLink,
-  Zap,
   X,
   ChevronLeft,
   ChevronRight,
@@ -238,20 +237,32 @@ function PartnerGallery({ partner }: { partner: Partner }) {
 
 function PartnerCard({ partner }: { partner: Partner }) {
   return (
-    <div className="space-y-8">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="rounded-2xl overflow-hidden bg-white/60 backdrop-blur-md border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.04)]"
+    >
       {/* Partner Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="rounded-2xl overflow-hidden bg-white/60 backdrop-blur-md border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.04)] p-8 sm:p-10"
-      >
+      <div className="p-8 sm:p-10">
         <div className="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
-          {/* Partner Icon */}
-          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-accent/10 flex items-center justify-center shrink-0">
-            <Zap className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
-          </div>
+          {/* Partner Logo */}
+          {partner.logo ? (
+            <div className="w-28 sm:w-36 shrink-0">
+              <Image
+                src={partner.logo}
+                alt={`${partner.name} logo`}
+                width={160}
+                height={80}
+                className="object-contain w-full h-auto"
+              />
+            </div>
+          ) : (
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-accent/10 flex items-center justify-center shrink-0">
+              <ExternalLink className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
+            </div>
+          )}
 
           <div className="flex-1">
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4">
@@ -285,11 +296,13 @@ function PartnerCard({ partner }: { partner: Partner }) {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
-      {/* Partner Gallery */}
-      <PartnerGallery partner={partner} />
-    </div>
+      {/* Gallery Carousel inside the card */}
+      <div className="px-8 sm:px-10 pb-8 sm:pb-10">
+        <PartnerGallery partner={partner} />
+      </div>
+    </motion.div>
   );
 }
 

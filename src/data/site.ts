@@ -54,6 +54,7 @@ export const partners: Partner[] = [
     name: "Stretch Electrics",
     slug: "stretch-electrics",
     website: "https://www.stretchelectrics.com.au/",
+    logo: "/images/partners/stretch-electrics/logo.png",
     description:
       "Stretch Electrics is a trusted electrical contractor providing electrical, air conditioning, data, and communications services across Melbourne and regional Victoria. With a proven track record working alongside Bayliss Building Group on commercial, education, and residential projects, they deliver reliable and compliant electrical solutions every time.",
     services: [
