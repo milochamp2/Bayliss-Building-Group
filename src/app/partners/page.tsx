@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ExternalLink,
@@ -12,13 +14,41 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
-import { Button } from "@/components/ui/button";
 import { partners } from "@/data/site";
 import type { Partner } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 function PartnerGallery({ partner }: { partner: Partner }) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: "start", skipSnaps: false },
+    [Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })]
+  );
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setActiveSlide(emblaApi.selectedScrollSnap());
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
+    };
+  }, [emblaApi, onSelect]);
 
   const openLightbox = (index: number) => setSelectedIndex(index);
   const closeLightbox = () => setSelectedIndex(null);
@@ -35,35 +65,96 @@ function PartnerGallery({ partner }: { partner: Partner }) {
     );
   };
 
+  // Keyboard navigation for lightbox
+  useEffect(() => {
+    if (selectedIndex === null) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowRight") goNext();
+      if (e.key === "ArrowLeft") goPrev();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  });
+
   return (
     <>
-      {/* Gallery Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-        {partner.images.map((image, index) => (
-          <motion.button
-            key={image.src}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.05 }}
-            onClick={() => openLightbox(index)}
-            className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
-              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+      {/* Carousel Gallery */}
+      <div className="relative group">
+        <div ref={emblaRef} className="overflow-hidden rounded-2xl">
+          <div className="flex -ml-4">
+            {partner.images.map((image, index) => (
+              <div
+                key={image.src}
+                className="min-w-0 shrink-0 grow-0 basis-full sm:basis-1/2 lg:basis-1/3 pl-4"
+              >
+                <button
+                  onClick={() => openLightbox(index)}
+                  className="group/slide relative aspect-[4/3] w-full rounded-xl overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover/slide:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-charcoal/0 group-hover/slide:bg-charcoal/30 transition-colors duration-300" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/slide:opacity-100 transition-opacity duration-300">
+                    <span className="bg-white/90 backdrop-blur-sm text-charcoal text-[0.7rem] font-heading font-semibold uppercase tracking-wider px-3 py-1.5 rounded-lg">
+                      View
+                    </span>
+                  </div>
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Carousel Arrows */}
+        <button
+          onClick={scrollPrev}
+          className={cn(
+            "absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10",
+            "w-12 h-12 rounded-full flex items-center justify-center",
+            "bg-white/80 backdrop-blur-md border border-white/40 shadow-elevated",
+            "text-charcoal hover:bg-white hover:scale-105 transition-all duration-200",
+            "opacity-0 group-hover:opacity-100"
+          )}
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <button
+          onClick={scrollNext}
+          className={cn(
+            "absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10",
+            "w-12 h-12 rounded-full flex items-center justify-center",
+            "bg-white/80 backdrop-blur-md border border-white/40 shadow-elevated",
+            "text-charcoal hover:bg-white hover:scale-105 transition-all duration-200",
+            "opacity-0 group-hover:opacity-100"
+          )}
+          aria-label="Next slide"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+
+        {/* Dot Indicators */}
+        <div className="flex justify-center gap-2 mt-6">
+          {partner.images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => emblaApi?.scrollTo(i)}
+              className={cn(
+                "h-2 rounded-full transition-all duration-300",
+                activeSlide === i
+                  ? "w-8 bg-accent"
+                  : "w-2 bg-charcoal-200 hover:bg-charcoal-300"
+              )}
+              aria-label={`Go to image ${i + 1}`}
             />
-            <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/30 transition-colors duration-300" />
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="bg-white/90 backdrop-blur-sm text-charcoal text-[0.7rem] font-heading font-semibold uppercase tracking-wider px-3 py-1.5 rounded-lg">
-                View
-              </span>
-            </div>
-          </motion.button>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Lightbox */}
