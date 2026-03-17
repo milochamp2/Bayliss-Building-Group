@@ -102,7 +102,7 @@ export const partners: Partner[] = [
     name: "The Australian Kitchen Co.",
     slug: "auskitchenco",
     website: "https://www.auskitchenco.com.au/",
-    logo: "/images/partners/auskitchenco/logo.jpg",
+    logo: "/images/partners/auskitchenco/logo.png.jpg",
     description:
       "The Australian Kitchen Co. is an Australian owned and operated company specialising in designing, supplying, and installing custom-built kitchens across Melbourne. From kitchen renovations to laundries, vanities, and wardrobes, they combine quality materials with skilled craftsmanship to transform spaces with precision and style.",
     services: [
