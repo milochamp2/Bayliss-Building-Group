@@ -299,9 +299,11 @@ function PartnerCard({ partner }: { partner: Partner }) {
       </div>
 
       {/* Gallery Carousel inside the card */}
-      <div className="px-8 sm:px-10 pb-8 sm:pb-10">
-        <PartnerGallery partner={partner} />
-      </div>
+      {partner.images.length > 0 && (
+        <div className="px-8 sm:px-10 pb-8 sm:pb-10">
+          <PartnerGallery partner={partner} />
+        </div>
+      )}
     </motion.div>
   );
 }

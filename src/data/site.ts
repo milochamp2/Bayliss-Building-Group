@@ -81,6 +81,40 @@ export const partners: Partner[] = [
       { src: "/images/partners/stretch-electrics/image 13.jpeg", alt: "Stretch Electrics project work" },
     ],
   },
+  {
+    name: "Hans On Plumbing Services",
+    slug: "hans-on-plumbing",
+    website: "https://www.hans-on-plumbing-services.com.au/",
+    logo: "/images/partners/hans-on-plumbing/logo.png",
+    description:
+      "Hans On Plumbing Services is a reliable plumbing contractor providing comprehensive plumbing solutions across Melbourne and Victoria. Working alongside Bayliss Building Group on commercial and residential projects, they deliver quality plumbing installations, maintenance, and emergency services with professionalism and attention to detail.",
+    services: [
+      "Plumbing installations",
+      "Commercial plumbing",
+      "Residential plumbing",
+      "Gas fitting",
+      "Drainage solutions",
+      "Maintenance & repairs",
+    ],
+    images: [],
+  },
+  {
+    name: "The Australian Kitchen Co.",
+    slug: "auskitchenco",
+    website: "https://www.auskitchenco.com.au/",
+    logo: "/images/partners/auskitchenco/logo.png",
+    description:
+      "The Australian Kitchen Co. is an Australian owned and operated company specialising in designing, supplying, and installing custom-built kitchens across Melbourne. From kitchen renovations to laundries, vanities, and wardrobes, they combine quality materials with skilled craftsmanship to transform spaces with precision and style.",
+    services: [
+      "Custom kitchen design",
+      "Kitchen renovations",
+      "Cabinetry & joinery",
+      "Laundry fit-outs",
+      "Vanities & wardrobes",
+      "Supply & installation",
+    ],
+    images: [],
+  },
 ];
 
 export const services = [
