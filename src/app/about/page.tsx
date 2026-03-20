@@ -89,7 +89,7 @@ export default function AboutPage() {
             <h1 className="text-display-sm sm:text-display lg:text-display-lg font-bold text-white">
               Building Victoria&apos;s Future
             </h1>
-            <p className="mt-6 text-body-lg text-white/60 leading-relaxed max-w-2xl">
+            <p className="mt-6 text-body-lg text-white/80 leading-relaxed max-w-2xl">
               Experienced builders delivering reliable construction solutions
               with strong workmanship and safety across commercial and
               residential sectors in Victoria.
@@ -134,7 +134,7 @@ export default function AboutPage() {
                 align="left"
                 className="mb-8"
               />
-              <div className="space-y-5 text-body-lg text-grey leading-relaxed">
+              <div className="space-y-5 text-body-lg text-charcoal/80 leading-relaxed">
                 <p>
                   Bayliss Building Group is a licensed construction and carpentry
                   company specialising in commercial and residential building
@@ -197,7 +197,7 @@ export default function AboutPage() {
                     <h4 className="font-heading font-bold text-body mb-1">
                       {item.title}
                     </h4>
-                    <p className="text-body-sm text-grey leading-relaxed">
+                    <p className="text-body-sm text-charcoal/70 leading-relaxed">
                       {item.text}
                     </p>
                   </div>
@@ -242,7 +242,7 @@ export default function AboutPage() {
                   <h4 className="font-heading font-bold text-heading-sm mt-1 mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-body text-grey leading-relaxed">
+                  <p className="text-body text-charcoal/70 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -291,7 +291,7 @@ export default function AboutPage() {
                 <h4 className="font-heading font-bold text-body mb-2">
                   {item.title}
                 </h4>
-                <p className="text-body-sm text-grey leading-relaxed">
+                <p className="text-body-sm text-charcoal/70 leading-relaxed">
                   {item.detail}
                 </p>
               </motion.div>

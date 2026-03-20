@@ -66,7 +66,7 @@ export default function ContactPage() {
             <h1 className="text-display-sm sm:text-display lg:text-display-lg font-bold text-white">
               Let&apos;s Start the Conversation
             </h1>
-            <p className="mt-6 text-body-lg text-white/60 leading-relaxed max-w-2xl">
+            <p className="mt-6 text-body-lg text-white/80 leading-relaxed max-w-2xl">
               Ready to discuss your next construction project? Get in touch with
               our team for a no-obligation consultation.
             </p>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                     <h3 className="font-heading font-bold text-heading-sm mb-3">
                       Thank You
                     </h3>
-                    <p className="text-body text-grey max-w-md mx-auto">
+                    <p className="text-body text-charcoal/70 max-w-md mx-auto">
                       Your enquiry has been received. A member of our team will
                       be in touch within one business day.
                     </p>
@@ -111,7 +111,7 @@ export default function ContactPage() {
                     <h2 className="font-heading font-bold text-heading-sm mb-2">
                       Project Enquiry
                     </h2>
-                    <p className="text-body text-grey mb-8">
+                    <p className="text-body text-charcoal/70 mb-8">
                       Fill out the form below and we&apos;ll get back to you
                       promptly.
                     </p>
@@ -280,7 +280,7 @@ export default function ContactPage() {
                           {item.detail}
                         </p>
                       )}
-                      <p className="text-body-sm text-grey mt-0.5">
+                      <p className="text-body-sm text-charcoal/60 mt-0.5">
                         {item.subtitle}
                       </p>
                     </div>
@@ -293,10 +293,10 @@ export default function ContactPage() {
                   <div className="absolute inset-0 flex items-center justify-center text-center">
                     <div>
                       <MapPin className="w-8 h-8 text-accent/40 mx-auto mb-2" />
-                      <p className="text-body-sm text-grey font-medium">
+                      <p className="text-body-sm text-white/70 font-medium">
                         Map integration placeholder
                       </p>
-                      <p className="text-body-sm text-grey/60">
+                      <p className="text-body-sm text-white/50">
                         Google Maps embed ready
                       </p>
                     </div>

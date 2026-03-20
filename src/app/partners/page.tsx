@@ -177,7 +177,7 @@ function PartnerGallery({ partner }: { partner: Partner }) {
             </button>
 
             {/* Counter */}
-            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10 text-white/60 text-body-sm font-heading">
+            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10 text-white/80 text-body-sm font-heading">
               {selectedIndex + 1} / {partner.images.length}
             </div>
 
@@ -224,7 +224,7 @@ function PartnerGallery({ partner }: { partner: Partner }) {
                 sizes="90vw"
                 priority
               />
-              <p className="absolute bottom-0 left-0 right-0 bg-charcoal/80 backdrop-blur-sm text-white/80 text-body-sm px-4 py-3 rounded-b-lg">
+              <p className="absolute bottom-0 left-0 right-0 bg-charcoal/80 backdrop-blur-sm text-white text-body-sm px-4 py-3 rounded-b-lg">
                 {partner.images[selectedIndex].alt}
               </p>
             </motion.div>
@@ -279,7 +279,7 @@ function PartnerCard({ partner }: { partner: Partner }) {
               </a>
             </div>
 
-            <p className="text-body text-grey leading-relaxed mb-6 max-w-3xl">
+            <p className="text-body text-charcoal/70 leading-relaxed mb-6 max-w-3xl">
               {partner.description}
             </p>
 
@@ -335,7 +335,7 @@ export default function PartnersPage() {
             <h1 className="text-display-sm sm:text-display lg:text-display-lg font-bold text-white">
               Trusted Trades &amp; Partners
             </h1>
-            <p className="mt-6 text-body-lg text-white/60 leading-relaxed max-w-2xl">
+            <p className="mt-6 text-body-lg text-white/80 leading-relaxed max-w-2xl">
               We work alongside a network of trusted tradespeople and specialist
               contractors who share our commitment to quality, safety, and
               reliability on every project.
@@ -362,10 +362,10 @@ export default function PartnersPage() {
               className="mt-16 text-center"
             >
               <div className="inline-block rounded-2xl bg-white/60 backdrop-blur-md border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.04)] px-10 py-8">
-                <p className="text-body-lg text-grey-dark font-heading font-semibold mb-2">
+                <p className="text-body-lg text-charcoal font-heading font-semibold mb-2">
                   More partners coming soon
                 </p>
-                <p className="text-body-sm text-grey max-w-md">
+                <p className="text-body-sm text-charcoal/60 max-w-md">
                   We&apos;re proud to collaborate with trusted trades across
                   Victoria. Check back as we grow our partner network.
                 </p>

@@ -68,14 +68,14 @@ export function Testimonials() {
               className="h-full bg-white/60 backdrop-blur-md border border-white/50 rounded-2xl p-6 sm:p-8 shadow-[0_8px_32px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-elevated hover:-translate-y-1 hover:border-white/70 flex flex-col glass-shine"
             >
               <Quote className="w-8 h-8 text-accent/30 mb-4 shrink-0" />
-              <p className="text-body text-grey-dark leading-relaxed flex-1 italic">
+              <p className="text-body text-charcoal leading-relaxed flex-1 italic">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
               <div className="mt-6 pt-5 border-t border-charcoal-100">
                 <p className="font-heading font-bold text-body text-charcoal">
                   {testimonial.name}
                 </p>
-                <p className="text-body-sm text-grey">
+                <p className="text-body-sm text-charcoal/60">
                   {testimonial.role}, {testimonial.company}
                 </p>
               </div>

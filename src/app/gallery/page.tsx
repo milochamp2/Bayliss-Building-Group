@@ -98,7 +98,7 @@ export default function GalleryPage() {
             <h1 className="text-display-sm sm:text-display lg:text-display-lg font-bold text-white">
               Our Work in Action
             </h1>
-            <p className="mt-6 text-body-lg text-white/60 leading-relaxed max-w-2xl">
+            <p className="mt-6 text-body-lg text-white/80 leading-relaxed max-w-2xl">
               A look at Bayliss Building Group on site — from groundwork to
               finished builds across Melbourne and Victoria.
             </p>
@@ -236,7 +236,7 @@ export default function GalleryPage() {
               <X className="w-5 h-5" />
             </button>
 
-            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10 text-white/60 text-body-sm font-heading">
+            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10 text-white/80 text-body-sm font-heading">
               {selectedIndex + 1} / {galleryImages.length}
             </div>
 

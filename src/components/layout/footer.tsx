@@ -28,17 +28,17 @@ export function Footer() {
                 <span className="font-heading font-bold text-lg tracking-tight">
                   Bayliss
                 </span>
-                <span className="font-heading font-medium text-[0.65rem] uppercase tracking-[0.2em] text-white/60">
+                <span className="font-heading font-medium text-[0.65rem] uppercase tracking-[0.2em] text-white/80">
                   Building Group
                 </span>
               </div>
             </Link>
-            <p className="text-body-sm text-white/60 leading-relaxed max-w-xs mb-4">
+            <p className="text-body-sm text-white/80 leading-relaxed max-w-xs mb-4">
               Commercial Construction &amp; Carpentry
               <br />
               Licensed Builder — {siteConfig.address.state}
             </p>
-            <p className="text-body-sm text-white/40 leading-relaxed max-w-xs mb-6">
+            <p className="text-body-sm text-white/70 leading-relaxed max-w-xs mb-6">
               {siteConfig.director}, {siteConfig.directorTitle}
             </p>
             <div className="flex gap-3">
@@ -61,7 +61,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold text-body-sm uppercase tracking-wider text-white/40 mb-5">
+            <h4 className="font-heading font-semibold text-body-sm uppercase tracking-wider text-white/70 mb-5">
               Company
             </h4>
             <ul className="space-y-3">
@@ -80,7 +80,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-heading font-semibold text-body-sm uppercase tracking-wider text-white/40 mb-5">
+            <h4 className="font-heading font-semibold text-body-sm uppercase tracking-wider text-white/70 mb-5">
               Services
             </h4>
             <ul className="space-y-3">
@@ -99,7 +99,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading font-semibold text-body-sm uppercase tracking-wider text-white/40 mb-5">
+            <h4 className="font-heading font-semibold text-body-sm uppercase tracking-wider text-white/70 mb-5">
               Contact
             </h4>
             <ul className="space-y-4">
@@ -137,14 +137,14 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-body-sm text-white/40">
+          <p className="text-body-sm text-white/70">
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
             reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link
               href="/contact"
-              className="text-body-sm text-white/40 hover:text-white/70 transition-colors flex items-center gap-1"
+              className="text-body-sm text-white/70 hover:text-white/70 transition-colors flex items-center gap-1"
             >
               Request a Quote <ArrowUpRight className="w-3 h-3" />
             </Link>

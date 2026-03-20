@@ -34,7 +34,7 @@ export function CTA() {
           <h2 className="text-heading-lg sm:text-display-sm lg:text-display font-bold text-white mb-6">
             Let&apos;s Talk About Your Next Project
           </h2>
-          <p className="text-body-lg text-white/60 leading-relaxed mb-10">
+          <p className="text-body-lg text-white/80 leading-relaxed mb-10">
             Whether you&apos;re planning a school development, childcare centre,
             commercial build, office fit-out, or government project — get in
             touch to discuss how Bayliss Building Group can deliver.

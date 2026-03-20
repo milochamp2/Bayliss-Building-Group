@@ -57,7 +57,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-7 text-body-lg sm:text-xl text-white/70 max-w-2xl leading-relaxed"
+            className="mt-7 text-body-lg sm:text-xl text-white/90 max-w-2xl leading-relaxed"
           >
             Bayliss Building Group delivers high-quality construction solutions
             with a strong focus on workmanship, reliability, safety and efficient
@@ -100,7 +100,7 @@ export function Hero() {
                 <span className="font-heading font-bold text-heading-sm text-white">
                   {stat.value}
                 </span>
-                <span className="text-body-sm text-white/50">{stat.label}</span>
+                <span className="text-body-sm text-white/70">{stat.label}</span>
               </div>
             ))}
           </motion.div>
@@ -118,7 +118,7 @@ export function Hero() {
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <ChevronDown className="w-5 h-5 text-white/30" />
+          <ChevronDown className="w-5 h-5 text-white/50" />
         </motion.div>
       </motion.div>
     </section>

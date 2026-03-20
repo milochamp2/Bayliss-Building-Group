@@ -43,7 +43,7 @@ export function ServicesOverview() {
                   <h3 className="font-heading font-bold text-heading-sm mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-body-sm text-grey leading-relaxed flex-1">
+                  <p className="text-body-sm text-charcoal/70 leading-relaxed flex-1">
                     {service.shortDescription}
                   </p>
                   <Link

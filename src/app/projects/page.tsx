@@ -33,7 +33,7 @@ export default function ProjectsPage() {
             <h1 className="text-display-sm sm:text-display lg:text-display-lg font-bold text-white">
               Work That Speaks for Itself
             </h1>
-            <p className="mt-6 text-body-lg text-white/60 leading-relaxed max-w-2xl">
+            <p className="mt-6 text-body-lg text-white/80 leading-relaxed max-w-2xl">
               A portfolio of commercial construction, carpentry, and fit-out
               projects delivered across Melbourne and Victoria.
             </p>
@@ -57,7 +57,7 @@ export default function ProjectsPage() {
             <h2 className="font-heading font-bold text-heading-lg sm:text-display-sm text-charcoal mb-4">
               Coming Soon
             </h2>
-            <p className="text-body-lg text-grey max-w-lg leading-relaxed">
+            <p className="text-body-lg text-charcoal/70 max-w-lg leading-relaxed">
               We&apos;re putting together a showcase of our best work. Check back
               soon to see our completed commercial builds, carpentry projects,
               and fit-outs across Victoria.

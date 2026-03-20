@@ -65,7 +65,7 @@ export function SectionHeader({
         {title}
       </h2>
       {description && (
-        <p className="mt-5 text-body-lg text-grey leading-relaxed">
+        <p className="mt-5 text-body-lg opacity-70 leading-relaxed">
           {description}
         </p>
       )}

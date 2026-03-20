@@ -3,6 +3,7 @@ import { Inter, Manrope } from "next/font/google";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
+import { IntroAnimation } from "@/components/intro-animation";
 import { siteConfig } from "@/data/site";
 import "./globals.css";
 
@@ -61,11 +62,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <body className="min-h-screen flex flex-col">
-        <SmoothScrollProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </SmoothScrollProvider>
+        <IntroAnimation>
+          <SmoothScrollProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </SmoothScrollProvider>
+        </IntroAnimation>
       </body>
     </html>
   );

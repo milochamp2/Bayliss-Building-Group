@@ -59,7 +59,7 @@ export default function ServicesPage() {
             <h1 className="text-display-sm sm:text-display lg:text-display-lg font-bold text-white">
               Comprehensive Construction Capabilities
             </h1>
-            <p className="mt-6 text-body-lg text-white/60 leading-relaxed max-w-2xl">
+            <p className="mt-6 text-body-lg text-white/80 leading-relaxed max-w-2xl">
               From schools and childcare centres to commercial fit-outs and
               structural carpentry — we deliver the complete scope of
               construction services needed to bring your project to life.
@@ -100,7 +100,7 @@ export default function ServicesPage() {
                     <h2 className="text-heading-lg sm:text-display-sm font-bold mb-5">
                       {service.title}
                     </h2>
-                    <p className="text-body-lg text-grey leading-relaxed mb-8">
+                    <p className="text-body-lg text-charcoal/80 leading-relaxed mb-8">
                       {service.description}
                     </p>
                     <ul className="space-y-3 mb-8">
@@ -199,7 +199,7 @@ export default function ServicesPage() {
                   <h4 className="font-heading font-bold text-heading-sm text-white mb-3">
                     {phase.title}
                   </h4>
-                  <p className="text-body-sm text-white/50 leading-relaxed">
+                  <p className="text-body-sm text-white/70 leading-relaxed">
                     {phase.description}
                   </p>
                 </div>

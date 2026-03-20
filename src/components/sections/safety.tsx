@@ -65,7 +65,7 @@ export function Safety() {
                 <br />
                 <span className="text-accent">It&apos;s a Standard.</span>
               </h2>
-              <p className="text-body-lg text-white/60 leading-relaxed max-w-xl">
+              <p className="text-body-lg text-white/80 leading-relaxed max-w-xl">
                 Bayliss Building Group is committed to maintaining a safe work
                 environment across every project. Safety is integrated into every
                 stage of our construction process.
@@ -88,7 +88,7 @@ export function Safety() {
                 <h4 className="font-heading font-bold text-body text-white mb-2">
                   {item.title}
                 </h4>
-                <p className="text-body-sm text-white/50 leading-relaxed">
+                <p className="text-body-sm text-white/70 leading-relaxed">
                   {item.description}
                 </p>
               </motion.div>

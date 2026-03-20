@@ -49,7 +49,7 @@ export function WhyChooseUs() {
                       <h4 className="font-heading font-bold text-body mb-1">
                         {value.title}
                       </h4>
-                      <p className="text-body-sm text-grey leading-relaxed">
+                      <p className="text-body-sm text-charcoal/70 leading-relaxed">
                         {value.description}
                       </p>
                     </div>
