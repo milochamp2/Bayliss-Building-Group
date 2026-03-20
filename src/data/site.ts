@@ -30,6 +30,7 @@ export const navLinks = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Partners", href: "/partners" },
   { label: "Contact", href: "/contact" },
 ];
@@ -112,6 +113,23 @@ export const partners: Partner[] = [
       "Laundry fit-outs",
       "Vanities & wardrobes",
       "Supply & installation",
+    ],
+    images: [],
+  },
+  {
+    name: "Bowens",
+    slug: "bowens",
+    website: "https://www.bowens.com.au/",
+    logo: "/images/partners/bowens/bowens-logo.png",
+    description:
+      "Bowens is a leading Australian supplier of timber, hardware, and building products. As a trusted materials partner for Bayliss Building Group, they provide high-quality construction supplies for commercial, residential, and renovation projects across Melbourne and regional Victoria.",
+    services: [
+      "Timber & structural products",
+      "Building hardware",
+      "Cladding & facades",
+      "Insulation & plasterboard",
+      "Roofing & guttering",
+      "Tools & trade supplies",
     ],
     images: [],
   },
