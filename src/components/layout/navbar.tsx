@@ -38,16 +38,19 @@ export function Navbar() {
       <Container>
         <nav className="flex items-center justify-between h-18 lg:h-22">
           {/* Logo */}
-          <Link href="/" className="relative z-10">
+          <Link
+            href="/"
+            className={cn(
+              "relative z-10 transition-all duration-300 rounded-xl",
+              !isScrolled && "bg-white/90 backdrop-blur-sm px-3 py-1.5"
+            )}
+          >
             <Image
               src="/images/bayliss logg.jpg"
               alt="Bayliss Building Group"
               width={160}
               height={60}
-              className={cn(
-                "h-12 w-auto object-contain transition-all duration-300",
-                isScrolled ? "brightness-100" : "brightness-0 invert"
-              )}
+              className="h-10 w-auto object-contain"
               priority
             />
           </Link>

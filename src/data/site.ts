@@ -156,6 +156,43 @@ export const partners: Partner[] = [
       { src: "/images/partners/direct cranes/img 6.jpg", alt: "Direct Cranes rigging services" },
     ],
   },
+  {
+    name: "Pro Plumbing Supplies",
+    slug: "pro-plumbing",
+    website: "https://proplumbingsupplies.com.au/",
+    logo: "/images/partners/pro plumbing/pro plumbing logo.png",
+    description:
+      "Pro Plumbing Supplies is a family-owned plumbing distributor with over 50 years of combined industry experience, supplying trade and retail customers across Melbourne. Stocking a comprehensive range of commercial, domestic, and maintenance plumbing products from leading brands, they support Bayliss Building Group projects with reliable supply and expert trade advice.",
+    services: [
+      "Commercial plumbing supplies",
+      "Bathroom & kitchen fixtures",
+      "Laundry & drainage products",
+      "Maintenance supplies",
+      "Trade & retail distribution",
+    ],
+    images: [],
+  },
+  {
+    name: "Pez Crete",
+    slug: "pezcrete",
+    website: "https://www.pezcrete.com.au/",
+    logo: "",
+    description:
+      "Pez Crete are Melbourne's trusted concrete specialists with over 10 years of experience and 500+ completed projects. Working alongside Bayliss Building Group, they deliver precision concrete work across residential and commercial projects — from driveways and slabs to structural works, exposed aggregate, and pool surrounds.",
+    services: [
+      "Concrete placement",
+      "Boxing & steel work",
+      "Exposed aggregate",
+      "Pool surrounds",
+      "Structural concrete",
+      "Driveways & footpaths",
+    ],
+    images: [
+      { src: "https://www.pezcrete.com.au/gallery/img%201.jpeg", alt: "Pez Crete concrete project" },
+      { src: "https://www.pezcrete.com.au/gallery/img%202.jpg", alt: "Pez Crete concrete work" },
+      { src: "https://www.pezcrete.com.au/gallery/img%203.jpg", alt: "Pez Crete finished concrete" },
+    ],
+  },
 ];
 
 export const services = [

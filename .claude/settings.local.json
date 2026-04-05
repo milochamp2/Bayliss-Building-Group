@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:proplumbingsupplies.com.au)",
+      "WebFetch(domain:www.pezcrete.com.au)"
+    ]
+  }
+}
