@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Phone,
   Mail,
@@ -18,20 +19,14 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-12 border-b border-white/10">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-5">
-              <div className="flex items-center gap-0.5">
-                <div className="w-2 h-8 bg-accent rounded-sm" />
-                <div className="w-2 h-6 bg-accent/60 rounded-sm" />
-                <div className="w-2 h-10 bg-accent rounded-sm" />
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="font-heading font-bold text-lg tracking-tight">
-                  Bayliss
-                </span>
-                <span className="font-heading font-medium text-[0.65rem] uppercase tracking-[0.2em] text-white/80">
-                  Building Group
-                </span>
-              </div>
+            <Link href="/" className="inline-block mb-5">
+              <Image
+                src="/images/bayliss logg.jpg"
+                alt="Bayliss Building Group"
+                width={160}
+                height={60}
+                className="h-12 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-body-sm text-white/80 leading-relaxed max-w-xs mb-4">
               Commercial Construction &amp; Carpentry

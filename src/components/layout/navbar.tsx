@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
@@ -37,30 +38,18 @@ export function Navbar() {
       <Container>
         <nav className="flex items-center justify-between h-18 lg:h-22">
           {/* Logo */}
-          <Link href="/" className="relative z-10 flex items-center gap-3">
-            <div className="flex items-center gap-0.5">
-              <div className="w-2 h-8 bg-accent rounded-sm" />
-              <div className="w-2 h-6 bg-accent/60 rounded-sm" />
-              <div className="w-2 h-10 bg-accent rounded-sm" />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span
-                className={cn(
-                  "font-heading font-bold text-lg tracking-tight transition-colors",
-                  isScrolled ? "text-charcoal" : "text-white"
-                )}
-              >
-                Bayliss
-              </span>
-              <span
-                className={cn(
-                  "font-heading font-medium text-[0.65rem] uppercase tracking-[0.2em] transition-colors",
-                  isScrolled ? "text-grey" : "text-white/70"
-                )}
-              >
-                Building Group
-              </span>
-            </div>
+          <Link href="/" className="relative z-10">
+            <Image
+              src="/images/bayliss logg.jpg"
+              alt="Bayliss Building Group"
+              width={160}
+              height={60}
+              className={cn(
+                "h-12 w-auto object-contain transition-all duration-300",
+                isScrolled ? "brightness-100" : "brightness-0 invert"
+              )}
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}

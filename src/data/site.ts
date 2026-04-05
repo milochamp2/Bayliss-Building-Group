@@ -133,6 +133,29 @@ export const partners: Partner[] = [
     ],
     images: [],
   },
+  {
+    name: "Direct Cranes",
+    slug: "direct-cranes",
+    website: "#",
+    logo: "/images/partners/direct cranes/logo.png",
+    description:
+      "Direct Cranes is a trusted crane hire and rigging specialist working alongside Bayliss Building Group on commercial construction projects across Victoria. With a fleet of modern cranes and experienced operators, they provide safe and efficient lifting solutions for projects of all scales.",
+    services: [
+      "Crane hire",
+      "Rigging & lifting",
+      "Commercial construction",
+      "Heavy equipment placement",
+      "Site access solutions",
+    ],
+    images: [
+      { src: "/images/partners/direct cranes/img 1.jpg", alt: "Direct Cranes on site" },
+      { src: "/images/partners/direct cranes/img 2.jpg", alt: "Direct Cranes lifting operation" },
+      { src: "/images/partners/direct cranes/img 3.jpg", alt: "Direct Cranes project work" },
+      { src: "/images/partners/direct cranes/img 4.jpg", alt: "Direct Cranes commercial construction" },
+      { src: "/images/partners/direct cranes/img 5.jpg", alt: "Direct Cranes crane hire" },
+      { src: "/images/partners/direct cranes/img 6.jpg", alt: "Direct Cranes rigging services" },
+    ],
+  },
 ];
 
 export const services = [
