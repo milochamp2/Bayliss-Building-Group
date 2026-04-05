@@ -21,11 +21,11 @@ export function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block mb-5">
               <Image
-                src="/images/buildng group bayliss.jpg"
+                src="/images/buildng group PNG.png"
                 alt="Bayliss Building Group"
-                width={200}
-                height={80}
-                className="h-14 w-auto object-contain [mix-blend-mode:screen]"
+                width={220}
+                height={90}
+                className="h-14 w-auto object-contain"
               />
             </Link>
             <p className="text-body-sm text-white/80 leading-relaxed max-w-xs mb-4">

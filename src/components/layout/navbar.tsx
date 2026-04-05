@@ -40,15 +40,13 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="relative z-10">
             <Image
-              src="/images/buildng group bayliss.jpg"
+              src="/images/buildng group PNG.png"
               alt="Bayliss Building Group"
-              width={200}
-              height={80}
+              width={220}
+              height={90}
               className={cn(
-                "h-12 w-auto object-contain transition-all duration-300",
-                isScrolled
-                  ? "[filter:invert(1)] [mix-blend-mode:multiply]"
-                  : "[mix-blend-mode:screen]"
+                "h-14 w-auto object-contain transition-all duration-300",
+                isScrolled && "[filter:invert(1)]"
               )}
               priority
             />

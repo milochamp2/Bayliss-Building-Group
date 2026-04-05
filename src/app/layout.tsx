@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.descriptionShort,
+  icons: {
+    icon: "/images/buildng group PNG.png",
+    apple: "/images/buildng group PNG.png",
+  },
   keywords: [
     "commercial construction",
     "carpentry",
