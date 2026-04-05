@@ -36,16 +36,16 @@ export function Navbar() {
       )}
     >
       <Container>
-        <nav className="flex items-center justify-between h-18 lg:h-22">
+        <nav className="flex items-center justify-between h-24 lg:h-28">
           {/* Logo */}
           <Link href="/" className="relative z-10">
             <Image
               src="/images/buildng group PNG.png"
               alt="Bayliss Building Group"
-              width={220}
-              height={90}
+              width={280}
+              height={110}
               className={cn(
-                "h-14 w-auto object-contain transition-all duration-300",
+                "h-20 w-auto object-contain transition-all duration-300",
                 isScrolled && "[filter:invert(1)]"
               )}
               priority

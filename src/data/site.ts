@@ -10,8 +10,8 @@ export const siteConfig = {
   url: "https://baylissbuildinggroup.com.au",
   director: "Jarrod Bayliss",
   directorTitle: "Director",
-  phone: "+61 3 9000 0000",
-  phoneDisplay: "(03) 9000 0000",
+  phone: "+61436526009",
+  phoneDisplay: "+61 436 526 009",
   email: "info@baylissbuildinggroup.com.au",
   address: {
     city: "Melbourne",

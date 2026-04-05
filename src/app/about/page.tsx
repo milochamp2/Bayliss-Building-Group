@@ -61,7 +61,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="relative pt-30 pb-20 sm:pt-36 sm:pb-24 bg-charcoal overflow-hidden">
+      <section className="relative pt-36 pb-20 sm:pt-44 sm:pb-24 bg-charcoal overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src={images.aboutHero}

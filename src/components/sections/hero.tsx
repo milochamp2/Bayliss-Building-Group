@@ -30,7 +30,7 @@ export function Hero() {
       {/* Accent bar */}
       <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-accent z-10" />
 
-      <Container className="relative z-10 pt-30 pb-20">
+      <Container className="relative z-10 pt-36 pb-20">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -77,7 +77,7 @@ export function Hero() {
               </Button>
             </Link>
             <Link href="/projects">
-              <Button variant="outline-light" size="xl">
+              <Button variant="outline-light" size="xl" className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-charcoal">
                 View Our Work
               </Button>
             </Link>
